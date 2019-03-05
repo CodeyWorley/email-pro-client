@@ -1,29 +1,31 @@
-import React, { useState } from "react";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 const Nav = props => {
-    let token = localStorage.getItem("jwtToken");
+    let token = localStorage.getItem('jwtToken');
 
     let navRight;
     if (token) {
         navRight = (
-            <div>
-                logged in
-            </div>
+            <button
+                onClick={() => logoutUser()}
+                className='btn btn-logout'>
+                Logout
+            </button>
         );
     }
 
     const logoutUser = async () => {
-        await localStorage.removeItem("jwtToken");
-        props.history.push("/");
+        await localStorage.removeItem('jwtToken');
+        props.history.push('/');
     };
     
     return (
         <React.Fragment>
-            <section>
-                nav
+            <nav>
+                EmailPro
                 {navRight}
-            </section>
+            </nav>
         </React.Fragment>
     );
 };

@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
     return (
-        <section>
-            footer
-        </section>
+        <footer>
+            <div className='footer-container'>
+                CodeyWorley&copy;2019
+            </div>
+        </footer>
     );
 };
 

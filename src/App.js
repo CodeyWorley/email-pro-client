@@ -7,6 +7,7 @@ import LandingPage from './components/landing-page';
 import RegisterPage from './components/register-page';
 import LoginPage from './components/login-page';
 import Dashboard from './components/dashboard-page';
+import EmailPage from './components/email-page';
 
 // import ErrorPage from './components/error-page';
 
@@ -20,6 +21,7 @@ const App = () => {
                 <Route exact path='/register' component={RegisterPage} />
                 <Route exact path='/login' component={LoginPage} />
                 <Route exact path='/dashboard' component={Dashboard} />
+                <Route exact path='/email' component={EmailPage} />
             </Switch>
             <Footer />
         </div>
