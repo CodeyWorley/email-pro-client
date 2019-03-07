@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 // import { Link, Route } from 'react-router-dom';
 import { API_BASE_URL } from '../config';
+import '../stylesheets/addresses.css';
 
 const Addresses = props => {
     const [emailAddresses, setAddresses] = useState([]);
@@ -74,16 +75,16 @@ const Addresses = props => {
         <section className='email-addresses'>
             <div className='addresses-container'>
             <div className='emails-header'>
-                <h2>Email Addresses</h2>
+                <h2>Addresses</h2>
             </div>
             <form
-                className='form address-form'
+                className='address-form'
                 noValidate
                 onSubmit={event => event.preventDefault()}>
             
                     <label htmlFor='name'/>
                     <input
-                        className='input form-input'
+                        className='input form-input address-input'
                         id='name'
                         type='text'
                         placeholder='name'
@@ -93,7 +94,7 @@ const Addresses = props => {
                 
                     <label htmlFor='email'/>
                     <input
-                        className='input form-input'
+                        className='input form-input address-input'
                         id='email'
                         type='email'
                         placeholder='email'
@@ -104,7 +105,7 @@ const Addresses = props => {
                     <button
                         onClick={() => createAddress(addressName, addressEmail)}
                         type='submit'
-                        className='btn btn-login-submit'>
+                        className='btn btn-create-address'>
                         Add
                     </button>
             </form>
@@ -113,12 +114,11 @@ const Addresses = props => {
                 {emailAddresses.map( email => {
                     return (
                         <div className='address' key={email._id}>
-                            <div className='email-name'>{email.name}</div>
                             <div className='email-address'>{email.emailAddress}</div>
                             <button
                                 onClick={() => deleteAddress(email._id)}
                                 className='btn btn-delete-address'>
-                                X
+                                delete
                             </button>
                         </div>
                     )

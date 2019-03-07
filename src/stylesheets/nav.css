@@ -1,0 +1,23 @@
+.navbar {
+    background: #BE9EC9;
+    /* background: #ece3f7; */
+    color: white;
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+.nav-container {
+    margin: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.btn-logout {
+    margin-left: auto;
+    padding: 0;
+    font-size: 14px;
+}
+.btn-logo {
+    padding: 0;
+    font-size: 20px;
+}

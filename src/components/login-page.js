@@ -41,47 +41,49 @@ const LoginPage = props => {
         <Route render={({history}) => (
             <section className='login'>
                 <div className='login-container'>
-                    <Link to='/' className=''>
+                    <Link to='/' className='back-link'>
                         <i className='material-icons left'>keyboard_backspace</i>
                         Back to home
                     </Link>
-                    <div className='login-header'>
-                        <h4>Login below</h4>
-                        <p>
-                            Don't have an account?{' '}
-                            <Link className='register' to='/register'>Register</Link>
-                        </p>
+                    <div className='form-container'>
+                        <div className='login-header'>
+                            <h2 className='form-header'>Login</h2>
+                            <p>
+                                Don't have an account?{' '}
+                                <Link className='register' to='/register'>Register</Link>
+                            </p>
+                        </div>
+                        <form
+                            className='form login-form'
+                            noValidate
+                            onSubmit={event => event.preventDefault()}>
+                        
+                                <label htmlFor='userName'/>
+                                <input
+                                    className='input form-input'
+                                    id='userName'
+                                    type='text'
+                                    placeholder='Username'
+                                    onChange={event => setUser(event.target.value)}
+                                />
+                            
+                                <label htmlFor='password'/>
+                                <input
+                                    className='input form-input'
+                                    id='password'
+                                    type='password'
+                                    placeholder='Password'
+                                    onChange={event => setPassword(event.target.value)}
+                                />
+                            
+                                <button
+                                    onClick={() => loginUser(history)}
+                                    type='submit'
+                                    className='btn btn-login-submit'>
+                                    Log In
+                                </button>
+                        </form>
                     </div>
-                    <form
-                        className='form login-form'
-                        noValidate
-                        onSubmit={event => event.preventDefault()}>
-                    
-                            <label htmlFor='userName'/>
-                            <input
-                                className='input form-input'
-                                id='userName'
-                                type='text'
-                                placeholder='Username'
-                                onChange={event => setUser(event.target.value)}
-                            />
-                        
-                            <label htmlFor='password'/>
-                            <input
-                                className='input form-input'
-                                id='password'
-                                type='password'
-                                placeholder='Password'
-                                onChange={event => setPassword(event.target.value)}
-                            />
-                        
-                            <button
-                                onClick={() => loginUser(history)}
-                                type='submit'
-                                className='btn btn-login-submit'>
-                                Log In
-                            </button>
-                    </form>
                 </div>
             </section>
         )}/>

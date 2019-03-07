@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import '../stylesheets/nav.css';
 
 const Nav = props => {
     let token = localStorage.getItem('jwtToken');
@@ -22,9 +23,15 @@ const Nav = props => {
     
     return (
         <React.Fragment>
-            <nav>
-                EmailPro
-                {navRight}
+            <nav className='navbar'>
+                <div className='nav-container'>
+                <button
+                    onClick={() => props.history.push('/')}
+                    className='btn btn-logo'>
+                    EmailPro
+                </button>
+                    {navRight}
+                </div>
             </nav>
         </React.Fragment>
     );

@@ -1,0 +1,36 @@
+.form.address-form {
+    flex-direction: row;
+    margin: 0;
+}
+.address-form > .form-input {
+    padding: 1%;
+    text-align: left;
+    border-bottom: 1px solid #BE9EC9;
+    margin-bottom: 1%;
+}
+.address-input {
+    width: 25%;
+}
+.btn-create-address {
+    padding: 1%;
+    border: 1px solid #BE9EC9;
+}
+.address {
+    display: flex;
+    width: 290px;
+}
+.btn-delete-address {
+    padding: 0;
+    font-size: 12px;
+    color: #BE9EC9;
+    background: white;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .address-input {
+      width: 40%;
+    }
+  }
+
+

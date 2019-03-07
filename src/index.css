@@ -7,8 +7,66 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+a {
+  text-decoration: none;
+}
+
+.register, .login, .landing, .email-page {
+  height: -webkit-fill-available;
+}
+
+/* General */
+.register-container, .login-container, .email-container, .dashboard {
+  margin: 4%;
+}
+.register-container, .login-container, .email-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.back-link {
+  display: flex;
+  align-items: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.form-container {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.form-header {
+  text-align: center;
+}
+.input, .btn {
+  text-align: center;
+  padding: 2%;
+  border: 1px solid #BE9EC9;
+  border-bottom: none;
+  font-size: 1.1rem;
+}
+.input:focus {
+  outline: none;
+}
+.btn {
+  border: none;
+  background: #BE9EC9;
+  color: white;
+  outline: none;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.email-list , .email-address-list, .address-form {
+  margin-left: 1%;
+}
+h2 {
+  margin: 2% 0;
 }

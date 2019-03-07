@@ -1,0 +1,36 @@
+.emails-header {
+    display: flex;
+    align-items: center;
+}
+.btn-create-email {
+    margin: 0 1%;
+    padding: 0;
+    height: 20px;
+    width: 20px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+.email-title {
+    margin: 0;
+}
+.email-header {
+    display: flex;
+    align-items: center;
+}
+.btn-delete-email, .btn-edit-email {
+    padding-left: 12px;
+    margin-left: auto;
+    font-size: 12px;
+    color: #BE9EC9;
+    background: white;
+}
+.email-btn-container {
+    margin-left: auto;
+    width: 100px;
+}
+.btn-container {
+    display: flex;
+}
+.btn-send-email {
+    margin: 1% auto;
+}

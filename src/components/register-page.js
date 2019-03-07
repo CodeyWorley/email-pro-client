@@ -37,56 +37,58 @@ const RegisterPage = props => {
         <Route render={({history}) => (
             <section className='register'>
                 <div className='register-container'>
-                    <Link to='/' className=''>
+                    <Link to='/' className='back-link'>
                         <i className='material-icons left'>keyboard_backspace</i>
                         Back to home
                     </Link>
-                    <div className='register-header'>
-                        <h4>Register below</h4>
-                        <p>
-                            Already have an account?{" "}
-                            <Link className="loginLink" to='/login'>Log In</Link>
-                        </p>
+                    <div className='form-container'>
+                        <div className='register-header'>
+                            <h2 className='form-header'>Register</h2>
+                            <p>
+                                Already have an account?{" "}
+                                <Link className="loginLink" to='/login'>Log In</Link>
+                            </p>
+                        </div>
+                        <form
+                            className='form registration-form'
+                            noValidate
+                            onSubmit={event => event.preventDefault()}>
+
+                            <label htmlFor='userName'></label>
+                            <input
+                                className='input form-input'
+                                id='userName'
+                                type='text'
+                                placeholder='Username'
+                                onChange={event => setUser(event.target.value)}
+                            />
+
+                            <label htmlFor='email'/>
+                            <input
+                                className='input form-input'
+                                id='email'
+                                type='email'
+                                placeholder='Email'
+                                onChange={event => setEmail(event.target.value)}
+                            />
+
+                            <label htmlFor='password'/>
+                            <input
+                                className='input form-input'
+                                id='password'
+                                type='password'
+                                placeholder='Password'
+                                onChange={event => setPassword(event.target.value)}
+                            />
+
+                            <button
+                                onClick={() => registerUser(history)}
+                                type='submit'
+                                className='btn btn-register-submit'>
+                                Sign Up
+                            </button>
+                        </form>
                     </div>
-                    <form
-                        className='form registration-form'
-                        noValidate
-                        onSubmit={event => event.preventDefault()}>
-
-                        <label htmlFor='userName'></label>
-                        <input
-                            className='input form-input'
-                            id='userName'
-                            type='text'
-                            placeholder='Username'
-                            onChange={event => setUser(event.target.value)}
-                        />
-
-                        <label htmlFor='email'/>
-                        <input
-                            className='input form-input'
-                            id='email'
-                            type='email'
-                            placeholder='Email'
-                            onChange={event => setEmail(event.target.value)}
-                        />
-
-                        <label htmlFor='password'/>
-                        <input
-                            className='input form-input'
-                            id='password'
-                            type='password'
-                            placeholder='Password'
-                            onChange={event => setPassword(event.target.value)}
-                        />
-
-                        <button
-                            onClick={() => registerUser(history)}
-                            type='submit'
-                            className='btn btn-register-submit'>
-                            Sign Up
-                        </button>
-                    </form>
                 </div>
             </section>
         )}/>

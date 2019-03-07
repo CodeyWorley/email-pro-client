@@ -1,0 +1,13 @@
+footer {
+    background: rgb(175, 132, 189);
+    /* background: #ece3f7; */
+    color: white;
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+.footer-container {
+    margin: 0 10%;
+    display: flex;
+    width: 100%;
+}

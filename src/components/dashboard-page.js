@@ -10,16 +10,25 @@ const Dashboard = props => {
     }
 
     // good idea for global push messages after completing forms on all pages
-    const [alert, setAlert] = useState('');
+    // const [alert, setAlert] = useState('');
     // if(props.location.state.alert) {
     //     //setAlert(props.location.state.alert);
+    // }
+    // let alertMessage;
+    // if(alert) {
+    //     alertMessage = (
+    //         <div className='alertMessage'>
+    //             <div className={`alert ${alert.type}`}>
+    //                 {alert.message}
+    //             </div>
+    //         </div>
+    //     )
     // }
     
     return (
         <Route render={({history}) => (
             <section className='dashboard'>
                 <div className='dashboard-container'>
-                    {alert}
                     <Addresses />
                     <Emails />
                 </div>
