@@ -94,7 +94,7 @@ const Emails = props => {
                                         )
                                     })}
                                 </div> */}
-                                <div className='btn-container'>
+                                <div className='btn-send-container '>
                                     <button
                                         onClick={() => sendEmail(email._id, email.title, email.content, email.recipients)}
                                         className='btn btn-send-email'>

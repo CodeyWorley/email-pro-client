@@ -74,7 +74,7 @@ const Addresses = props => {
     return (
         <section className='email-addresses'>
             <div className='addresses-container'>
-            <div className='emails-header'>
+            <div className='addresses-header'>
                 <h2>Addresses</h2>
             </div>
             <form

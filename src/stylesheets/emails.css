@@ -1,6 +1,7 @@
 .emails-header {
     display: flex;
     align-items: center;
+    margin-top: 6%;
 }
 .btn-create-email {
     margin: 0 1%;
@@ -28,9 +29,10 @@
     margin-left: auto;
     width: 100px;
 }
-.btn-container {
+.btn-send-container {
     display: flex;
 }
 .btn-send-email {
     margin: 1% auto;
+    margin-bottom: 40px;
 }
